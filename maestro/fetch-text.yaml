@@ -1,0 +1,6 @@
+appId: com.acunap.myexpoplayground
+---
+- launchApp
+- assertVisible: "This is the default fetch text."
+- tapOn: "Fetch"
+- assertVisible: "Hello, world!"

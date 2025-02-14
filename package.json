@@ -1,16 +1,14 @@
 {
-  "name": "my-expo-playground",
+  "name": "myexpoplayground",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
     "clean": "rm -rf node_modules && rm -rf ios && rm -rf android && rm -rf dist && rm -rf .expo",
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "test": "jest --watchAll",
-    "lint": "eslint . --fix",
-    "prepare": "husky"
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "maestro": "maestro test maestro",
+    "maestro:ci": "start-server-and-test $PLATFORM http://localhost:8081 maestro",
+    "lint": "eslint . --fix"
   },
   "jest": {
     "preset": "jest-expo"
@@ -55,6 +53,7 @@
     "jest-expo": "~52.0.4",
     "prettier": "^3.5.1",
     "react-test-renderer": "18.3.1",
+    "start-server-and-test": "^2.0.10",
     "typescript": "^5.3.3"
   },
   "private": true

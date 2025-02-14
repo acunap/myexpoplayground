@@ -1,0 +1,6 @@
+appId: com.acunap.myexpoplayground
+---
+- launchApp
+- assertVisible: "This is the default text."
+- tapOn: "Click here"
+- assertVisible: "The text has changed!"
